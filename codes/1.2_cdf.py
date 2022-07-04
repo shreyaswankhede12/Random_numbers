@@ -63,3 +63,4 @@ plt.legend(["Numerical","Theory"])
 #else
 plt.savefig('figs/uni_cdf.pdf') 
 plt.savefig('figs/uni_cdf.eps')
+plt.show()
