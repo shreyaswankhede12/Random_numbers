@@ -356,7 +356,7 @@ p_{X}(x) = \frac{d}{dx}F_{X}(x)
 \end{align}
 What properties does the PDF have?
 \\
-\solution The PDF of $X$ is plotted in Fig. \ref{fig:gauss_pdf} using the code below
+\solution The PDF of $X$ is plotted in Fig. 2.3 using the code below
 \begin{lstlisting}
 wget https://github.com/shreyaswankhede12/Random_numbers/blob/main/codes/2.3_emp_pdf.py
 \end{lstlisting}
@@ -394,29 +394,23 @@ Thus h(x) is an odd function
 \begin{align}
 \therefore E[X]&=\int_{-\infty}^{\infty}h(x)dx=0\\
 E[X^2]&=\int_{-\infty}^{\infty}x^2P_{X}(x)dx\\
-&=\int_{-\infty}^{\infty}\dfrac{x^2}{\sqrt{2\pi}}\exp\brak{\dfrac{-x^2}{2}}dx\\
-\text{Let}\hspace{2mm} g(x)&=\dfrac{x^2}{\sqrt{2\pi}}\exp\brak{\dfrac{-x^2}{2}}\nonumber
+&=\int_{-\infty}^{\infty}\dfrac{x^2}{\sqrt{2\pi}}\exp\brak{\dfrac{-x^2}{2}}dx
 \end{align}
-Now,
-\begin{align}
-g(-x)=g(x)\nonumber
-\end{align}
-Thus g(x) is an even function\\
 Using integration by parts:
   \begin{align}
    \label{eq:eq1}
- & =x\int xe^{-\frac{-x^2}{2}} dx-\int\frac{d(x)}{dx} \int xe^{-\frac{-x^2}{2}}dx\\
- &I=\int x e^{-\frac{-x^2}{2}}\\
- &\text{Let} \frac{x^2}{2}=t \\
+ & =x\int xe^{\frac{-x^2}{2}} dx-\int\frac{d(x)}{dx} \int xe^{\frac{-x^2}{2}}dx\\
+ &I=\int x e^{\frac{-x^2}{2}}\\
+ &\text{Let}\hspace{2mm}  \frac{x^2}{2}=t \\
  &\implies x dx=dt\\
- &\implies =\int e^{-t} dt=-e^{-t} +c\\
+ &\implies \int e^{-t} dt=-e^{-t} +c\\
  \label{eq:eq2}
- &\therefore \int x e^{-\frac{-x^2}{2}}=-e^{-\frac{-x^2}{2}} +c
+ &\therefore \int x e^{\frac{-x^2}{2}}=-e^{\frac{-x^2}{2}} +c
  \end{align}
  Using \eqref{eq:eq2} in \eqref{eq:eq1}
  \begin{align}
-&= -x e^{-\frac{-x^2}{2}}+\int e^{-\frac{-x^2}{2}} dx\\
-&\text{Also} ,\int_{-\infty}^{\infty} e^{-\frac{-x^2}{2}} dx=\sqrt{2 \pi} 
+&= -x e^{\frac{-x^2}{2}}+\int e^{\frac{-x^2}{2}} dx\\
+&\text{Also} ,\int_{-\infty}^{\infty} e^{\frac{-x^2}{2}} dx=\sqrt{2 \pi} 
 \end{align}
 $\therefore$ substituting limits we get
 \begin{align}
